@@ -92,70 +92,49 @@ number_bitmap:
     db 0, 1, 1, 1
     db 0, 0, 0, 1
     db 0, 1, 1, 0
+%macro BLOCK_COLOR_DATA 0
+    db 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
+    db 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
+    db 00, 40, 40, 40, 40, 40, 40, 40, 40, 40, 00
+    db 00, 42, 42, 42, 42, 42, 42, 42, 42, 42, 00
+    db 00, 44, 44, 44, 44, 44, 44, 44, 44, 44, 00
+    db 00, 48, 48, 48, 48, 48, 48, 48, 48, 48, 00
+    db 00, 52, 52, 52, 52, 52, 52, 52, 52, 52, 00
+%endmacro
 block_color_bitmap:
-    db 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
-    db 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
-    db 00, 40, 40, 40, 40, 40, 40, 40, 40, 40, 00
-    db 00, 42, 42, 42, 42, 42, 42, 42, 42, 42, 00
-    db 00, 44, 44, 44, 44, 44, 44, 44, 44, 44, 00
-    db 00, 48, 48, 48, 48, 48, 48, 48, 48, 48, 00
-    db 00, 52, 52, 52, 52, 52, 52, 52, 52, 52, 00
+    BLOCK_COLOR_DATA
 current_color:
-    db 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
-    db 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
-    db 00, 40, 40, 40, 40, 40, 40, 40, 40, 40, 00
-    db 00, 42, 42, 42, 42, 42, 42, 42, 42, 42, 00
-    db 00, 44, 44, 44, 44, 44, 44, 44, 44, 44, 00
-    db 00, 48, 48, 48, 48, 48, 48, 48, 48, 48, 00
-    db 00, 52, 52, 52, 52, 52, 52, 52, 52, 52, 00
+    BLOCK_COLOR_DATA
+%macro LEVEL_DATA 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
+    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
+    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
+    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
+    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    db 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+%endmacro
 level_bitmap:
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+    LEVEL_DATA
 current_level:
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    db 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
-old_int09_ip:   dw  0
+    LEVEL_DATA
 old_int09_cs:   dw  0
+old_int09_ip:   dw  0
 any_key_state:  db  0
 key_state_a:    db  0
 key_state_d:    db  0
@@ -309,9 +288,9 @@ INSTALL_ISR:
     
     ; Save the original vector
     mov ax, [9 * 4]
-    mov [old_int09_cs], ax
-    mov ax, [9 * 4 + 2]
     mov [old_int09_ip], ax
+    mov ax, [9 * 4 + 2]
+    mov [old_int09_cs], ax
     
     ; Install the new vector
     mov dx, KEYBOARD_ISR
@@ -333,9 +312,9 @@ RESTORE_ISR:
     mov ds, ax
     
     ; Restore the original vector
-    mov ax, [old_int09_cs]
-    mov [9 * 4], ax
     mov ax, [old_int09_ip]
+    mov [9 * 4], ax
+    mov ax, [old_int09_cs]
     mov [9 * 4 + 2], ax
 
     ; Return to main program
@@ -440,6 +419,10 @@ DRAW_PIXEL:
     ret
 
 
+; DRAW_RECTANGLE — fill a solid-colour rectangle in VRAM
+; In:   AX = left X, BX = top Y, CX = width, DH = height, DL = colour
+; Out:  pixels written to ES:[VRAM]
+; Clob: AX, BX, CX, DX, SI, DI, BP
 DRAW_RECTANGLE:
     ; Input:
     ; - AX = Leftmost X coordinate
@@ -564,6 +547,10 @@ DRAW_HEART:
     ret
 
 
+; DRAW_LIVES — draw up to 3 heart icons for remaining lives (capped at 3)
+; In:   AL = lives_left
+; Out:  hearts drawn at bottom-left of screen
+; Clob: AX, BX, CX, DX, SI
 DRAW_LIVES:
     ; Input: AL = Remaining lives
     mov cx, -4
@@ -588,6 +575,10 @@ DRAW_LIVES:
     ret
 
 
+; DRAW_NUMBER — draw a single digit 0-9 from the number bitmap
+; In:   CX = X, DX = Y, AL = colour, BL = digit value
+; Out:  digit drawn to VRAM
+; Clob: AX, BX, CX, DX, SI
 DRAW_NUMBER:
     ; Input:
     ; - CX = X coordinate
@@ -635,6 +626,10 @@ DRAW_NUMBER:
     ret
 
 
+; DRAW_SCORE — draw 3-digit score at bottom-right of screen
+; In:   AL = current_score (0-255)
+; Out:  digits drawn; score capped at 255
+; Clob: AX, BX, CX, DX
 DRAW_SCORE:
     ; Input: AL = Current score
     mov cx, 316
@@ -721,6 +716,10 @@ DRAW_PADDLE:
     ret
 
 
+; DRAW_BALL — draw a solid square representing the ball
+; In:   AX = center X, BX = center Y, DH = radius, DL = colour
+; Out:  square drawn to VRAM
+; Clob: AX, BX, CX, DX, BP
 DRAW_BALL:
     ; Input:
     ; - AX = Center X coordinate
@@ -787,6 +786,10 @@ DRAW_LEVEL:
     ret
 
 
+; UPDATE_PADDLE — move paddle by paddle_speed, clamped to screen edges
+; In:   [paddle_speed], [paddle_x], [paddle_y], [paddle_half_w], [paddle_color]
+; Out:  [paddle_x] updated, paddle redrawn
+; Clob: AX, BX, CX, DX
 UPDATE_PADDLE:
     ; Input: paddle_speed
     mov dl, 0
@@ -825,6 +828,10 @@ UPDATE_PADDLE:
     ret
 
 
+; UPDATE_PADDLE_SPEED — decelerate paddle toward neutral; reflect at screen edges
+; In:   [paddle_speed], [paddle_x], [paddle_half_w]
+; Out:  [paddle_speed] updated
+; Clob: AX, BX, CX
 UPDATE_PADDLE_SPEED:
     mov al, [paddle_speed]
     mov bx, [paddle_x]
@@ -884,6 +891,12 @@ UPDATE_PADDLE_SPEED:
     ret
 
 
+; CHECK_BALL_COLLISION — detect and resolve ball collision with bounding box
+; In:   [left_bound], [right_bound], [top_bound], [bottom_bound]
+;       [ball_x], [ball_y], [ball_r], [ball_x_speed], [ball_y_speed]
+;       [prev_ball_x], [prev_ball_y]
+; Out:  [ball_x_speed]/[ball_y_speed] reversed on collision; DH=1 if X collision, DL=1 if Y
+; Clob: AX, BX, CX, DX
 CHECK_BALL_COLLISION:
     ; Input:
     ; left_bound, right_bound,
@@ -1035,6 +1048,10 @@ REDRAW_BALL:
     ret
 
 
+; UPDATE_BALL_X_POSITION — advance ball X by speed delta; clamped to [0, 317]
+; In:   [ball_x], [ball_x_speed]
+; Out:  [ball_x] updated
+; Clob: AX, DX
 UPDATE_BALL_X_POSITION:
     push dx
     xor dx, dx
@@ -1048,11 +1065,19 @@ UPDATE_BALL_X_POSITION:
 .out_of_bounds:
     mov ax, 0
 .end:
+    cmp ax, 317
+    jle .store_x
+    mov ax, 317
+.store_x:
     mov [ball_x], ax
     pop dx
     ret
 
 
+; UPDATE_BALL_Y_POSITION — advance ball Y by speed delta; clamped to [0, 197]
+; In:   [ball_y], [ball_y_speed]
+; Out:  [ball_y] updated
+; Clob: AX, DX
 UPDATE_BALL_Y_POSITION:
     push dx
     xor dx, dx
@@ -1066,11 +1091,19 @@ UPDATE_BALL_Y_POSITION:
 .out_of_bounds:
     mov ax, 0
 .end:
+    cmp ax, 197
+    jle .store_y
+    mov ax, 197
+.store_y:
     mov [ball_y], ax
     pop dx
     ret
 
 
+; UPDATE_BALL_POSITION — save previous position then advance ball X and Y
+; In:   [ball_x], [ball_y], [ball_x_speed], [ball_y_speed]
+; Out:  [prev_ball_x], [prev_ball_y] saved; [ball_x], [ball_y] updated
+; Clob: AX
 UPDATE_BALL_POSITION:
     mov ax, [ball_x]
     mov [prev_ball_x], ax
@@ -1081,6 +1114,10 @@ UPDATE_BALL_POSITION:
     ret
 
 
+; CHECK_WALL_COLLISIONS — check ball against all four screen edges; play bounce sound
+; In:   [ball_x], [ball_y], [ball_r]
+; Out:  ball speed reversed on collision; SOUND_BOUNCE called on hit
+; Clob: AX, BX, CX, DX
 CHECK_WALL_COLLISIONS:
 .left:
     mov word [left_bound], 0
@@ -1126,6 +1163,10 @@ CHECK_WALL_COLLISIONS:
     ret
 
 
+; CHECK_PADDLE_COLLISION — detect ball–paddle overlap; steer ball by hit position
+; In:   [ball_x], [ball_y], [ball_r], [paddle_x], [paddle_y], [paddle_half_w], [paddle_half_h]
+; Out:  [ball_x_speed]/[ball_y_speed] updated with steer angle; SOUND_BOUNCE on hit
+; Clob: AX, BX, CX, DX
 CHECK_PADDLE_COLLISION:
     mov ax, [paddle_x]
     mov bx, [paddle_y]
@@ -1330,6 +1371,10 @@ CHECK_PADDLE_COLLISION:
     ret
 
     
+; CHECK_LEVEL_COLLISION — check ball against brick grid; destroy bricks, update score
+; In:   [ball_x], [ball_y], [current_level], [current_color], [current_score], [blocks_left]
+; Out:  bricks erased on hit; score/lives updated; level rebuild on clear or death
+; Clob: AX, BX, CX, DX, SI, DI
 CHECK_LEVEL_COLLISION:
     mov ax, [ball_x]
     mov bx, [ball_y]
@@ -1452,6 +1497,10 @@ CHECK_LEVEL_COLLISION:
 
 .lose_life:
     mov al, [lives_left]
+    cmp al, 3
+    jbe .safe_decrement
+    mov al, 3
+.safe_decrement:
     dec al
     mov [lives_left], al
     call SOUND_LOSE_LIFE
@@ -1498,8 +1547,11 @@ CHECK_LEVEL_COLLISION:
     call DRAW_RECTANGLE
     call SOUND_BLOCK_BREAK
     mov al, [current_score]
+    cmp al, 255
+    jae .score_capped
     inc al
     mov [current_score], al
+.score_capped:
     mov al, [blocks_left]
     dec al
     mov [blocks_left], al
@@ -1610,6 +1662,10 @@ SPEAKER_OFF:
     ret
 
 
+; SOUND_BOUNCE — play a short 785 Hz tone (wall/paddle bounce)
+; In:   (none)
+; Out:  PC speaker activated briefly
+; Clob: AX, CX
 SOUND_BOUNCE:
     push ax
     push cx
@@ -1642,6 +1698,10 @@ SOUND_BOUNCE:
     ret
 
 
+; SOUND_BLOCK_BREAK — play a rising frequency sweep (brick destroyed)
+; In:   (none)
+; Out:  PC speaker sweep from 994 Hz upward
+; Clob: AX, BX, CX
 SOUND_BLOCK_BREAK:
     push ax
     push cx
@@ -1685,6 +1745,10 @@ SOUND_BLOCK_BREAK:
     ret
 
 
+; SOUND_LOSE_LIFE — play a two-tone descending sound (life lost)
+; In:   (none)
+; Out:  PC speaker: 1356 Hz then 3977 Hz
+; Clob: AX, CX
 SOUND_LOSE_LIFE:
     push ax
     push cx
@@ -1740,6 +1804,10 @@ SOUND_LOSE_LIFE:
     ret
 
 
+; SOUND_NEXT_LEVEL — play a two-tone ascending sound (level cleared)
+; In:   (none)
+; Out:  PC speaker: 1988 Hz then 1193 Hz
+; Clob: AX, CX
 SOUND_NEXT_LEVEL:
     push ax
     push cx
